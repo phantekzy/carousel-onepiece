@@ -30,9 +30,10 @@ A fully responsive and accessible image carousel featuring smooth navigation and
 Screenshots of the carousel in action (images are located in the `img` folder):
 
 ![Carousel Screenshot 1](./img/1.png)  
-![Carousel Screenshot 2](./img/2.png)  
+
 ![Carousel Screenshot 3](./img/3.png)
 
+![Carousel Screenshot 2](./img/2.png) 
 ---
 
 ## Technologies Used
