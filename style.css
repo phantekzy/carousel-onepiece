@@ -1,0 +1,192 @@
+/* ----------------------------------
+   IMPORT FONT (One Piece style)
+---------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+/* ----------------------------------
+   GLOBAL STYLES
+---------------------------------- */
+body {
+  background: url('img/onepiece-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 30px;
+  font-family: 'Pirata One', cursive;
+  color: #000;
+}
+
+/* Page Title */
+.title {
+  font-size: 3em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Section Titles */
+h2 {
+  font-family: 'Pirata One', cursive;
+  font-size: 2em;
+  margin: 30px 0 15px 0;
+  color: #f1e08a;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* ----------------------------------
+   CAROUSEL LAYOUT WRAPPERS
+---------------------------------- */
+#carousel1,
+#carousel2,
+#carousel3 {
+  display: flex;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Carousel wrapper root */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px; /* Spacing below carousel */
+}
+
+/* Carousel container for items */
+.carousel__container {
+  transition: transform 0.3s;
+}
+
+/* Clearfix */
+.carousel__container::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/* Carousel items */
+.carousel__item {
+  float: left;
+}
+
+/* ----------------------------------
+   CAROUSEL ITEM STYLE
+---------------------------------- */
+.item {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 3px solid #d1a35a;
+  border-radius: 12px;
+  margin-right: 20px;
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  transform: scale(1.02);
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.item__text {
+  background-color: white;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  color: #000;
+  text-align: center;
+}
+
+.item__title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 0 5px 0;
+  color: #5b3012;
+}
+
+.item__description {
+  font-size: 1em;
+  font-weight: bold;
+  color: #7c4313;
+  margin: 0;
+}
+
+/* ----------------------------------
+   NAVIGATION BUTTONS
+---------------------------------- */
+.carousel__next,
+.carousel__prev {
+  position: absolute;
+  top: 40%;
+  height: 60px;
+  width: 60px;
+  background: #FFF center center no-repeat;
+  background-size: 50px 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 1.4s;
+  z-index: 2;
+}
+
+.carousel__next {
+  right: 10px;
+  background-image: url(img/next.svg);
+}
+
+.carousel__prev {
+  left: 10px;
+  background-image: url(img/prev.svg);
+}
+
+.carousel__next:hover,
+.carousel__prev:hover {
+  transform: scale(1.2);
+}
+
+.carousel__next--hidden,
+.carousel__prev--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ----------------------------------
+   PAGINATION BUTTONS
+---------------------------------- */
+.carousel__pagination {
+  position: static;           /* Changed from absolute */
+  margin-top: 12px;           /* Space below carousel */
+  text-align: center;
+  display: block;
+}
+
+.carousel__pagination__button {
+  display: inline-block;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 4px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.carousel__pagination__button__active,
+.carousel__pagination__button:hover {
+  transform: scale(1.4);
+  background-color: #ffe66d; /* Soft yellow for One Piece feel */
+}
+
+/* ----------------------------------
+   MEDIA QUERIES
+---------------------------------- */
+@media screen and (max-width: 899px) {
+  .carousel__pagination {
+    visibility: hidden; /* Optional: hide pagination on mobile */
+  }
+}
+
